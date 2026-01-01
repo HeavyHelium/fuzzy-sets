@@ -1,0 +1,410 @@
+{
+  "mf_type": "gaussian",
+  "fixed acidity": [
+    {
+      "type": "gaussian",
+      "mean": 7.111858974358975,
+      "sigma": 0.09671765205453964,
+      "center_idx": 2,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 7.498729582577132,
+      "sigma": 0.0967176520545392,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 8.214626865671642,
+      "sigma": 0.06777185501066096,
+      "center_idx": 1,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 8.485714285714286,
+      "sigma": 0.06777185501066096,
+      "center_idx": 0,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 10.624396782841824,
+      "sigma": 0.534670624281885,
+      "center_idx": 3,
+      "sorted_idx": 4
+    }
+  ],
+  "volatile acidity": [
+    {
+      "type": "gaussian",
+      "mean": 0.40760053619302944,
+      "sigma": 0.009830635182511871,
+      "center_idx": 3,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.4469230769230769,
+      "sigma": 0.009830635182511871,
+      "center_idx": 2,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.5282142857142857,
+      "sigma": 0.0021218017057569316,
+      "center_idx": 0,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.5367014925373135,
+      "sigma": 0.0021218017057569316,
+      "center_idx": 1,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.6495916515426499,
+      "sigma": 0.028222539751334097,
+      "center_idx": 4,
+      "sorted_idx": 4
+    }
+  ],
+  "citric acid": [
+    {
+      "type": "gaussian",
+      "mean": 0.114573502722323,
+      "sigma": 0.03188547047326541,
+      "center_idx": 4,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.24211538461538462,
+      "sigma": 0.01243384041331802,
+      "center_idx": 2,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.2918507462686567,
+      "sigma": 0.01243384041331802,
+      "center_idx": 1,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.4901340482573727,
+      "sigma": 0.0027343450785139722,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.5010714285714286,
+      "sigma": 0.0027343450785139722,
+      "center_idx": 0,
+      "sorted_idx": 4
+    }
+  ],
+  "residual sugar": [
+    {
+      "type": "gaussian",
+      "mean": 1.9892857142857143,
+      "sigma": 0.04230196886446902,
+      "center_idx": 0,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 2.15849358974359,
+      "sigma": 0.01965518695611701,
+      "center_idx": 2,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 2.2371143375680584,
+      "sigma": 0.019655186956117232,
+      "center_idx": 4,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 2.7357908847184986,
+      "sigma": 0.12000750270097238,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 3.2158208955223886,
+      "sigma": 0.1200075027009726,
+      "center_idx": 1,
+      "sorted_idx": 4
+    }
+  ],
+  "chlorides": [
+    {
+      "type": "gaussian",
+      "mean": 0.06805769230769229,
+      "sigma": 0.004044560589138629,
+      "center_idx": 2,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.08423593466424682,
+      "sigma": 0.0006957080229463355,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.08701876675603216,
+      "sigma": 0.0003968008483053939,
+      "center_idx": 3,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.08860597014925373,
+      "sigma": 0.000396800848305387,
+      "center_idx": 1,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.35964285714285715,
+      "sigma": 0.06775922174840085,
+      "center_idx": 0,
+      "sorted_idx": 4
+    }
+  ],
+  "free sulfur dioxide": [
+    {
+      "type": "gaussian",
+      "mean": 10.166219839142084,
+      "sigma": 0.38834522170268304,
+      "center_idx": 3,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 11.719600725952816,
+      "sigma": 0.38834522170268304,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 15.357142857142858,
+      "sigma": 0.5633585164835164,
+      "center_idx": 0,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 17.610576923076923,
+      "sigma": 0.5633585164835164,
+      "center_idx": 2,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 27.492537313432834,
+      "sigma": 2.4704900975889785,
+      "center_idx": 1,
+      "sorted_idx": 4
+    }
+  ],
+  "total sulfur dioxide": [
+    {
+      "type": "gaussian",
+      "mean": 29.024128686327057,
+      "sigma": 1.27345966144909,
+      "center_idx": 3,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 34.11796733212342,
+      "sigma": 1.2734596614490918,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 39.58653846153847,
+      "sigma": 1.3671427823537599,
+      "center_idx": 2,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 63.25,
+      "sigma": 5.915865384615383,
+      "center_idx": 0,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 91.20895522388057,
+      "sigma": 6.989738805970141,
+      "center_idx": 1,
+      "sorted_idx": 4
+    }
+  ],
+  "density": [
+    {
+      "type": "gaussian",
+      "mean": 0.9944376602564102,
+      "sigma": 0.0005448952807249885,
+      "center_idx": 2,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.9966172413793103,
+      "sigma": 0.00011729679802957582,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.9970864285714286,
+      "sigma": 9.742270788909435e-05,
+      "center_idx": 0,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.9974761194029851,
+      "sigma": 9.742270788914986e-05,
+      "center_idx": 1,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.9981886595174263,
+      "sigma": 0.0001781350286103045,
+      "center_idx": 3,
+      "sorted_idx": 4
+    }
+  ],
+  "pH": [
+    {
+      "type": "gaussian",
+      "mean": 3.043214285714286,
+      "sigma": 0.03453825162772883,
+      "center_idx": 0,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 3.181367292225201,
+      "sigma": 0.026471609779520566,
+      "center_idx": 3,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 3.2872537313432835,
+      "sigma": 0.021035931955467824,
+      "center_idx": 1,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 3.3713974591651543,
+      "sigma": 0.009506404439480809,
+      "center_idx": 4,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 3.409423076923077,
+      "sigma": 0.009506404439480587,
+      "center_idx": 2,
+      "sorted_idx": 4
+    }
+  ],
+  "sulphates": [
+    {
+      "type": "gaussian",
+      "mean": 0.5904718693284937,
+      "sigma": 0.009695465503697431,
+      "center_idx": 4,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.6292537313432836,
+      "sigma": 0.009695465503697487,
+      "center_idx": 1,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.6805128205128206,
+      "sigma": 0.009563483879837742,
+      "center_idx": 2,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 0.7187667560321715,
+      "sigma": 0.009563483879837742,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 1.2789285714285714,
+      "sigma": 0.14004045384909997,
+      "center_idx": 0,
+      "sorted_idx": 4
+    }
+  ],
+  "alcohol": [
+    {
+      "type": "gaussian",
+      "mean": 9.496428571428572,
+      "sigma": 0.08151474769012079,
+      "center_idx": 0,
+      "sorted_idx": 0
+    },
+    {
+      "type": "gaussian",
+      "mean": 9.822487562189055,
+      "sigma": 0.03202934962212556,
+      "center_idx": 1,
+      "sorted_idx": 1
+    },
+    {
+      "type": "gaussian",
+      "mean": 9.950604960677557,
+      "sigma": 0.03202934962212556,
+      "center_idx": 4,
+      "sorted_idx": 2
+    },
+    {
+      "type": "gaussian",
+      "mean": 10.617605004468276,
+      "sigma": 0.1667500109476796,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "gaussian",
+      "mean": 11.752457264957265,
+      "sigma": 0.2837130651222477,
+      "center_idx": 2,
+      "sorted_idx": 4
+    }
+  ]
+}

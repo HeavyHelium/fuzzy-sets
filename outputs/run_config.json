@@ -1,0 +1,21 @@
+{
+  "k": 5,
+  "seed": 42,
+  "n_init": 10,
+  "max_iter": 300,
+  "n_samples": 1599,
+  "n_features": 11,
+  "feature_names": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol"
+  ]
+}

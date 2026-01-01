@@ -1,0 +1,465 @@
+{
+  "mf_type": "triangular",
+  "fixed acidity": [
+    {
+      "type": "triangular",
+      "left": 4.6,
+      "peak": 7.111858974358975,
+      "right": 7.305294278468054,
+      "center_idx": 2,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 7.305294278468054,
+      "peak": 7.498729582577132,
+      "right": 7.856678224124387,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 7.856678224124387,
+      "peak": 8.214626865671642,
+      "right": 8.350170575692964,
+      "center_idx": 1,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 8.350170575692964,
+      "peak": 8.485714285714286,
+      "right": 9.555055534278054,
+      "center_idx": 0,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 9.555055534278054,
+      "peak": 10.624396782841824,
+      "right": 15.9,
+      "center_idx": 3,
+      "sorted_idx": 4
+    }
+  ],
+  "volatile acidity": [
+    {
+      "type": "triangular",
+      "left": 0.12,
+      "peak": 0.40760053619302944,
+      "right": 0.4272618065580532,
+      "center_idx": 3,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 0.4272618065580532,
+      "peak": 0.4469230769230769,
+      "right": 0.48756868131868136,
+      "center_idx": 2,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 0.48756868131868136,
+      "peak": 0.5282142857142857,
+      "right": 0.5324578891257996,
+      "center_idx": 0,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 0.5324578891257996,
+      "peak": 0.5367014925373135,
+      "right": 0.5931465720399817,
+      "center_idx": 1,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 0.5931465720399817,
+      "peak": 0.6495916515426499,
+      "right": 1.58,
+      "center_idx": 4,
+      "sorted_idx": 4
+    }
+  ],
+  "citric acid": [
+    {
+      "type": "triangular",
+      "left": 0.0,
+      "peak": 0.114573502722323,
+      "right": 0.17834444366885382,
+      "center_idx": 4,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 0.17834444366885382,
+      "peak": 0.24211538461538462,
+      "right": 0.26698306544202066,
+      "center_idx": 2,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 0.26698306544202066,
+      "peak": 0.2918507462686567,
+      "right": 0.3909923972630147,
+      "center_idx": 1,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 0.3909923972630147,
+      "peak": 0.4901340482573727,
+      "right": 0.49560273841440067,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 0.49560273841440067,
+      "peak": 0.5010714285714286,
+      "right": 1.0,
+      "center_idx": 0,
+      "sorted_idx": 4
+    }
+  ],
+  "residual sugar": [
+    {
+      "type": "triangular",
+      "left": 0.9,
+      "peak": 1.9892857142857143,
+      "right": 2.0738896520146524,
+      "center_idx": 0,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 2.0738896520146524,
+      "peak": 2.15849358974359,
+      "right": 2.197803963655824,
+      "center_idx": 2,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 2.197803963655824,
+      "peak": 2.2371143375680584,
+      "right": 2.4864526111432785,
+      "center_idx": 4,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 2.4864526111432785,
+      "peak": 2.7357908847184986,
+      "right": 2.9758058901204434,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 2.9758058901204434,
+      "peak": 3.2158208955223886,
+      "right": 15.5,
+      "center_idx": 1,
+      "sorted_idx": 4
+    }
+  ],
+  "chlorides": [
+    {
+      "type": "triangular",
+      "left": 0.012,
+      "peak": 0.06805769230769229,
+      "right": 0.07614681348596955,
+      "center_idx": 2,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 0.07614681348596955,
+      "peak": 0.08423593466424682,
+      "right": 0.0856273507101395,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 0.0856273507101395,
+      "peak": 0.08701876675603216,
+      "right": 0.08781236845264295,
+      "center_idx": 3,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 0.08781236845264295,
+      "peak": 0.08860597014925373,
+      "right": 0.22412441364605545,
+      "center_idx": 1,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 0.22412441364605545,
+      "peak": 0.35964285714285715,
+      "right": 0.611,
+      "center_idx": 0,
+      "sorted_idx": 4
+    }
+  ],
+  "free sulfur dioxide": [
+    {
+      "type": "triangular",
+      "left": 1.0,
+      "peak": 10.166219839142084,
+      "right": 10.94291028254745,
+      "center_idx": 3,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 10.94291028254745,
+      "peak": 11.719600725952816,
+      "right": 13.538371791547837,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 13.538371791547837,
+      "peak": 15.357142857142858,
+      "right": 16.48385989010989,
+      "center_idx": 0,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 16.48385989010989,
+      "peak": 17.610576923076923,
+      "right": 22.551557118254877,
+      "center_idx": 2,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 22.551557118254877,
+      "peak": 27.492537313432834,
+      "right": 72.0,
+      "center_idx": 1,
+      "sorted_idx": 4
+    }
+  ],
+  "total sulfur dioxide": [
+    {
+      "type": "triangular",
+      "left": 6.0,
+      "peak": 29.024128686327057,
+      "right": 31.571048009225237,
+      "center_idx": 3,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 31.571048009225237,
+      "peak": 34.11796733212342,
+      "right": 36.85225289683095,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 36.85225289683095,
+      "peak": 39.58653846153847,
+      "right": 51.41826923076923,
+      "center_idx": 2,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 51.41826923076923,
+      "peak": 63.25,
+      "right": 77.22947761194028,
+      "center_idx": 0,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 77.22947761194028,
+      "peak": 91.20895522388057,
+      "right": 289.0,
+      "center_idx": 1,
+      "sorted_idx": 4
+    }
+  ],
+  "density": [
+    {
+      "type": "triangular",
+      "left": 0.99007,
+      "peak": 0.9944376602564102,
+      "right": 0.9955274508178602,
+      "center_idx": 2,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 0.9955274508178602,
+      "peak": 0.9966172413793103,
+      "right": 0.9968518349753694,
+      "center_idx": 4,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 0.9968518349753694,
+      "peak": 0.9970864285714286,
+      "right": 0.9972812739872068,
+      "center_idx": 0,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 0.9972812739872068,
+      "peak": 0.9974761194029851,
+      "right": 0.9978323894602057,
+      "center_idx": 1,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 0.9978323894602057,
+      "peak": 0.9981886595174263,
+      "right": 1.00369,
+      "center_idx": 3,
+      "sorted_idx": 4
+    }
+  ],
+  "pH": [
+    {
+      "type": "triangular",
+      "left": 2.74,
+      "peak": 3.043214285714286,
+      "right": 3.1122907889697435,
+      "center_idx": 0,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 3.1122907889697435,
+      "peak": 3.181367292225201,
+      "right": 3.2343105117842423,
+      "center_idx": 3,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 3.2343105117842423,
+      "peak": 3.2872537313432835,
+      "right": 3.329325595254219,
+      "center_idx": 1,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 3.329325595254219,
+      "peak": 3.3713974591651543,
+      "right": 3.390410268044116,
+      "center_idx": 4,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 3.390410268044116,
+      "peak": 3.409423076923077,
+      "right": 4.01,
+      "center_idx": 2,
+      "sorted_idx": 4
+    }
+  ],
+  "sulphates": [
+    {
+      "type": "triangular",
+      "left": 0.33,
+      "peak": 0.5904718693284937,
+      "right": 0.6098628003358886,
+      "center_idx": 4,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 0.6098628003358886,
+      "peak": 0.6292537313432836,
+      "right": 0.6548832759280521,
+      "center_idx": 1,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 0.6548832759280521,
+      "peak": 0.6805128205128206,
+      "right": 0.6996397882724961,
+      "center_idx": 2,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 0.6996397882724961,
+      "peak": 0.7187667560321715,
+      "right": 0.9988476637303715,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 0.9988476637303715,
+      "peak": 1.2789285714285714,
+      "right": 2.0,
+      "center_idx": 0,
+      "sorted_idx": 4
+    }
+  ],
+  "alcohol": [
+    {
+      "type": "triangular",
+      "left": 8.4,
+      "peak": 9.496428571428572,
+      "right": 9.659458066808813,
+      "center_idx": 0,
+      "sorted_idx": 0
+    },
+    {
+      "type": "triangular",
+      "left": 9.659458066808813,
+      "peak": 9.822487562189055,
+      "right": 9.886546261433306,
+      "center_idx": 1,
+      "sorted_idx": 1
+    },
+    {
+      "type": "triangular",
+      "left": 9.886546261433306,
+      "peak": 9.950604960677557,
+      "right": 10.284104982572916,
+      "center_idx": 4,
+      "sorted_idx": 2
+    },
+    {
+      "type": "triangular",
+      "left": 10.284104982572916,
+      "peak": 10.617605004468276,
+      "right": 11.18503113471277,
+      "center_idx": 3,
+      "sorted_idx": 3
+    },
+    {
+      "type": "triangular",
+      "left": 11.18503113471277,
+      "peak": 11.752457264957265,
+      "right": 14.9,
+      "center_idx": 2,
+      "sorted_idx": 4
+    }
+  ]
+}
