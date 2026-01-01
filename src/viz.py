@@ -821,124 +821,110 @@ def generate_all_pdfs(
     y_quality: np.ndarray,
     output_dir: Path = Path("figures")
 ) -> None:
-    """Generate PDF versions of all figures and a combined PDF."""
+    """Generate combined PDF with ALL existing PNG figures."""
     from matplotlib.backends.backend_pdf import PdfPages
+    from PIL import Image
     
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    # Combined PDF with all figures
+    # Combined PDF with all figures - collect all existing PNGs
     combined_pdf_path = output_dir / "all_figures.pdf"
     
-    with PdfPages(combined_pdf_path) as pdf:
-        # 1. Elbow curve
-        fig, ax = plt.subplots(figsize=(10, 6))
-        ax.plot(inertia_df["k"], inertia_df["inertia"], "o-", linewidth=2, markersize=10)
-        ax.set_xlabel("Number of Clusters (k)", fontsize=12)
-        ax.set_ylabel("Inertia (Sum of Squared Distances)", fontsize=12)
-        ax.set_title("K-means Elbow Curve", fontsize=14, fontweight="bold")
-        ax.set_xticks(inertia_df["k"])
-        plt.tight_layout()
-        pdf.savefig(fig, bbox_inches="tight")
-        plt.savefig(output_dir / "inertia_vs_k.pdf", bbox_inches="tight")
-        plt.close()
-        
-        # 2. Cluster centers heatmap
-        centers_norm = (centers_raw - centers_raw.min(axis=0)) / (
-            centers_raw.max(axis=0) - centers_raw.min(axis=0) + 1e-8
-        )
-        fig, ax = plt.subplots(figsize=(14, 7))
-        sns.heatmap(
-            centers_norm,
-            annot=centers_raw.round(2),
-            fmt="",
-            xticklabels=feature_names,
-            yticklabels=[f"Cluster {i}" for i in range(len(centers_raw))],
-            cmap="YlOrRd",
-            ax=ax,
-            cbar_kws={"label": "Normalized Value"}
-        )
-        ax.set_title("Cluster Centers (values shown, colors normalized)", fontsize=14, fontweight="bold")
-        plt.xticks(rotation=45, ha="right")
-        plt.tight_layout()
-        pdf.savefig(fig, bbox_inches="tight")
-        plt.savefig(output_dir / "cluster_centers_heatmap.pdf", bbox_inches="tight")
-        plt.close()
-        
-        # 3. Quality by cluster
-        k = len(np.unique(labels))
-        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-        data = pd.DataFrame({"Cluster": labels, "Quality": y_quality})
-        sns.boxplot(data=data, x="Cluster", y="Quality", hue="Cluster", ax=axes[0], palette="viridis", legend=False)
-        axes[0].set_title("Quality Distribution by Cluster", fontsize=12, fontweight="bold")
-        cluster_means = data.groupby("Cluster")["Quality"].agg(["mean", "std", "count"]).reset_index()
-        bars = axes[1].bar(
-            cluster_means["Cluster"],
-            cluster_means["mean"],
-            yerr=cluster_means["std"],
-            capsize=5,
-            color=plt.cm.viridis(np.linspace(0.2, 0.8, k)),
-            edgecolor="black"
-        )
-        axes[1].set_title("Mean Quality by Cluster (±1 std)", fontsize=12, fontweight="bold")
-        for bar, count in zip(bars, cluster_means["count"]):
-            axes[1].text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.1, f"n={count}", ha="center", fontsize=9)
-        plt.tight_layout()
-        pdf.savefig(fig, bbox_inches="tight")
-        plt.savefig(output_dir / "quality_by_cluster.pdf", bbox_inches="tight")
-        plt.close()
-        
-        # 4. All membership functions
-        mf_type = membership_params.get("mf_type", "triangular")
-        for idx, feature in enumerate(feature_names):
-            mfs = membership_params[feature]
-            k = len(mfs)
-            feat_values = X_raw[:, idx]
-            feat_min, feat_max = feat_values.min(), feat_values.max()
-            padding = (feat_max - feat_min) * 0.05
-            x_range = np.linspace(feat_min - padding, feat_max + padding, 500)
-            
-            fig, ax1 = plt.subplots(figsize=(10, 6))
-            colors = plt.cm.viridis(np.linspace(0.1, 0.9, k))
-            
-            for i, mf in enumerate(mfs):
-                mu = evaluate_mf(x_range, mf)
-                label = f"Set {i+1} (cluster {mf['center_idx']})"
-                ax1.plot(x_range, mu, linewidth=2.5, color=colors[i], label=label)
-                ax1.fill_between(x_range, mu, alpha=0.15, color=colors[i])
-                # Get center for vertical line
-                if mf_type == "triangular":
-                    center = mf["peak"]
-                elif mf_type == "gaussian":
-                    center = mf["mean"]
-                elif mf_type == "trapezoidal":
-                    center = (mf["b"] + mf["c"]) / 2
-                else:
-                    center = mf.get("peak", mf.get("mean", 0))
-                ax1.axvline(center, color=colors[i], linestyle="--", alpha=0.5, linewidth=1)
-            
-            ax1.set_xlabel(feature, fontsize=12)
-            ax1.set_ylabel("Membership Degree (μ)", fontsize=12)
-            ax1.set_ylim(-0.05, 1.1)
-            ax1.set_xlim(x_range[0], x_range[-1])
-            
-            ax2 = ax1.twinx()
-            ax2.hist(feat_values, bins=30, alpha=0.25, color="gray", density=True)
-            ax2.set_ylabel("Density", fontsize=10, color="gray")
-            ax2.tick_params(axis="y", labelcolor="gray")
-            ax2.set_ylim(bottom=0)
-            
-            type_label = mf_type.capitalize()
-            ax1.set_title(f"{type_label} Membership Functions: {feature}", fontsize=14, fontweight="bold")
-            ax1.legend(loc="upper right", fontsize=9)
-            plt.tight_layout()
-            
-            pdf.savefig(fig, bbox_inches="tight")
-            safe_name = feature.replace(" ", "_").replace("/", "_")
-            suffix = f"_{mf_type}" if mf_type != "triangular" else ""
-            plt.savefig(output_dir / f"membership_{safe_name}{suffix}.pdf", bbox_inches="tight")
-            plt.close()
+    # Define the order of figures for the combined PDF
+    # First, the key analysis plots in logical order
+    priority_order = [
+        # Data exploration
+        "feature_distributions.png",
+        "feature_boxplots.png",
+        "feature_summary_stats.png",
+        "feature_correlation.png",
+        # Cluster selection
+        "inertia_vs_k.png",
+        "cluster_metrics_panel.png",
+        # Cluster visualization
+        "clusters_pca.png",
+        "clusters_pairwise.png",
+        "cluster_profiles_radar.png",
+        "cluster_centers_heatmap.png",
+        "quality_by_cluster.png",
+        # All features panels (per MF type)
+        "all_features_triangular.png",
+        "all_features_gaussian.png",
+        "all_features_trapezoidal.png",
+    ]
     
-    print(f"Saved combined PDF to {combined_pdf_path}")
+    # Get all PNG files
+    all_pngs = sorted(output_dir.glob("*.png"))
+    
+    # Build ordered list: priority files first, then remaining files
+    ordered_pngs = []
+    remaining_pngs = set(all_pngs)
+    
+    for priority_file in priority_order:
+        full_path = output_dir / priority_file
+        if full_path in remaining_pngs:
+            ordered_pngs.append(full_path)
+            remaining_pngs.remove(full_path)
+    
+    # Add MF panel comparisons next
+    mf_panels = sorted([p for p in remaining_pngs if p.name.startswith("mf_panel_")])
+    for p in mf_panels:
+        ordered_pngs.append(p)
+        remaining_pngs.remove(p)
+    
+    # Add individual membership plots
+    membership_plots = sorted([p for p in remaining_pngs if p.name.startswith("membership_")])
+    for p in membership_plots:
+        ordered_pngs.append(p)
+        remaining_pngs.remove(p)
+    
+    # Add any remaining files
+    ordered_pngs.extend(sorted(remaining_pngs))
+    
+    # Create combined PDF from all PNGs
+    with PdfPages(combined_pdf_path) as pdf:
+        for png_path in ordered_pngs:
+            try:
+                # Load image and add to PDF
+                img = Image.open(png_path)
+                
+                # Create figure with appropriate size
+                dpi = 100
+                fig_width = img.width / dpi
+                fig_height = img.height / dpi
+                
+                fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+                ax.imshow(img)
+                ax.axis("off")
+                plt.tight_layout(pad=0)
+                
+                pdf.savefig(fig, bbox_inches="tight", pad_inches=0)
+                plt.close()
+                
+            except Exception as e:
+                print(f"Warning: Could not add {png_path.name} to PDF: {e}")
+    
+    print(f"Saved combined PDF with {len(ordered_pngs)} figures to {combined_pdf_path}")
+    
+    # Also generate individual PDFs for any PNGs that don't have one
+    for png_path in all_pngs:
+        pdf_path = png_path.with_suffix(".pdf")
+        if not pdf_path.exists():
+            try:
+                img = Image.open(png_path)
+                dpi = 100
+                fig_width = img.width / dpi
+                fig_height = img.height / dpi
+                
+                fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+                ax.imshow(img)
+                ax.axis("off")
+                plt.tight_layout(pad=0)
+                plt.savefig(pdf_path, bbox_inches="tight", pad_inches=0)
+                plt.close()
+            except Exception as e:
+                print(f"Warning: Could not create PDF for {png_path.name}: {e}")
+    
     print(f"Saved individual PDFs to {output_dir}/")
 
